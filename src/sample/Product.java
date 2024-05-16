@@ -1,3 +1,4 @@
+package sample;
 import java.time.LocalDate;
 
 public class Product {
@@ -45,4 +46,14 @@ public class Product {
     public void setStock(boolean stock) {
         this.stock = stock;
     }
+    @Override
+    public String toString() {
+        return "Product [number=" + number + ", name=" + name + ", price=" + price + ", date=" + date + ", stock="
+                + stock + "]";
+    }
+    public int TotalPrice(int quantity) {
+        int total = this.price*quantity;
+        return total;
+    }
+    
 }
